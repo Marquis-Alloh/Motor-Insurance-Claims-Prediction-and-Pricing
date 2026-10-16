@@ -33,31 +33,34 @@ In addition, this project seeks to answer the following questions:
 
 ## Project Structure
 
-TBD: to be decided, a placeholder showing it's going to be updated in the future.
+`TBD` means “to be decided” and marks a placeholder for content that will be added later.
 
+## Project Structure
+
+```text
 motor-insurance-pricing/
 ├── data/
-│   ├── raw/                       # Original dataset; not committed to Git
-│   ├──── Claims.csv               # Dataset containing the claims made
-│   ├──── Motor.csv                # Dataset containing policies of interest
-│   ├──── Descriptive.xlsx         # Data dictionary with descriptions of variables in the datasets
-│   ├── processed/                 # Cleaned and transformed datasets
-│   ├────TBD.csv
-│   └── README.md                  # Data sources, licensing and setup
+│   ├── raw/                              # Original data files (local only; not committed)
+│   │   ├── Claims.csv                   # Claims data
+│   │   ├── Motor.csv                    # Motor policy data
+│   │   └── Descriptive.xlsx             # Data dictionary
+│   ├── processed/                        # Cleaned and transformed datasets
+│   │   └── TBD.csv
+│   └── README.md                         # Data sources, licensing and setup
 ├── notebooks/
-│   ├── TBD.ipynb
+│   └── TBD.ipynb                         # Exploratory analysis
 ├── sql/
-│   ├── schema.sql                 # Database tables and constraints
-│   ├── load_data.sql              # SQL loading / transformation queries
-│   └── analysis_queries.sql       # Reusable analytical queries
+│   ├── schema.sql                        # Database tables and constraints
+│   ├── load_data.sql                     # Data loading and transformation queries
+│   └── analysis_queries.sql              # Reusable analytical queries
 ├── src/
 │   └── insurance_pricing/
 │       ├── __init__.py
-│       ├── data.py                # Data loading and validation
-│       ├── features.py            # Feature engineering
-│       ├── modelling.py           # Frequency and severity models
-│       ├── evaluation.py          # Model diagnostics and comparisons
-│       └── pricing.py             # Pure premium calculations
+│       ├── data.py                       # Data loading and validation
+│       ├── features.py                   # Feature engineering
+│       ├── modelling.py                  # Frequency and severity models
+│       ├── evaluation.py                 # Model diagnostics and comparisons
+│       └── pricing.py                    # Pure premium calculations
 ├── tests/
 │   ├── test_data.py
 │   ├── test_features.py
@@ -65,14 +68,15 @@ motor-insurance-pricing/
 │   ├── test_pricing.py
 │   └── test_database.py
 ├── api/
-│   └── main.py                    # FastAPI prediction endpoint
+│   └── main.py                           # Prediction API endpoint
 ├── reports/
-│   ├── figures/
-│   └── model_comparison.md
+│   ├── figures/                          # Generated plots and visualisations
+│   └── model_comparison.md               # Model evaluation findings
 ├── .github/
 │   └── workflows/
-│       └── tests.yml              # Automated testing with GitHub Actions
-├── .env.example                   # Example configuration; no real secrets
-├── .gitignore
-├── pyproject.toml                 # Dependencies and development tools
-└── README.md
+│       └── tests.yml                     # Automated tests using GitHub Actions
+├── .env.example                          # Example environment configuration
+├── .gitignore                            # Files excluded from Git
+├── pyproject.toml                        # Project metadata, dependencies and tooling
+└── README.md                             # Project overview and setup instructions
+```
