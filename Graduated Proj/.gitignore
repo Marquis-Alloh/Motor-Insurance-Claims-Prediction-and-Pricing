@@ -1,0 +1,8 @@
+# Raw and processed datasets
+data/Raw/
+data/Processed/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
