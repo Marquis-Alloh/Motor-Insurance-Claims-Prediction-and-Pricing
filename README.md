@@ -39,6 +39,12 @@ In addition, this project seeks to answer the following questions:
 
 - What should the insurer charge?
 
+### Dataset
+
+The dataset being used is a [dataset of an actual motor vehicle insurance portfolio](https://data.mendeley.com/datasets/compare/5cxyb5fp4f?utm_source=chatgpt.com) for an insurer.
+
+The data is formatted as a spreadsheet, encompassing the primary activities over a span of three full years (November 2015 to December 2018) concerning non-life motor insurance portfolio. This dataset comprises 105,555 rows and 30 columns. Each row signifies a policy transaction, while each column represents a distinct variable.
+
 
 ## Project Structure
 
