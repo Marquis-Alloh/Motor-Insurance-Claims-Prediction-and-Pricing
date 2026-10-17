@@ -30,6 +30,15 @@ In addition, this project seeks to answer the following questions:
 
 - How to perform quality assurance checks responsibly and effectively?
 
+- Who claims?
+    - What is there demographic?
+
+- How much do they cost?
+
+- What variables drive risk?
+
+- What should the insurer charge?
+
 
 ## Project Structure
 
@@ -38,7 +47,7 @@ In addition, this project seeks to answer the following questions:
 ## Project Structure
 
 ```text
-motor-insurance-pricing/
+Motor-Insurance-Claims-Prediction-and-Pricing/
 ├── data/
 │   ├── raw/                              # Original data files (local only; not committed)
 │   │   ├── Claims.csv                   # Claims data
@@ -48,7 +57,8 @@ motor-insurance-pricing/
 │   │   └── TBD.csv
 │   └── README.md                         # Data sources, licensing and setup
 ├── notebooks/
-│   └── TBD.ipynb                         # Exploratory analysis
+│   ├── TBD.ipynb                         
+│   ├── Descriptive.sql                        # Descriptive analysis
 ├── sql/
 │   ├── schema.sql                        # Database tables and constraints
 │   ├── load_data.sql                     # Data loading and transformation queries
@@ -56,7 +66,8 @@ motor-insurance-pricing/
 ├── src/
 │   └── insurance_pricing/
 │       ├── __init__.py
-│       ├── data.py                       # Data loading and validation
+│       ├── data.py                       # Data loading and inspection
+│       ├── cleaning.py                   # Data cleaning and validation
 │       ├── features.py                   # Feature engineering
 │       ├── modelling.py                  # Frequency and severity models
 │       ├── evaluation.py                 # Model diagnostics and comparisons
