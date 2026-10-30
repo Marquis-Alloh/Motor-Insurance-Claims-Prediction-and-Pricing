@@ -45,6 +45,17 @@ The dataset being used is a [dataset of an actual motor vehicle insurance portfo
 
 The data is formatted as a spreadsheet, encompassing the primary activities over a span of three full years (November 2015 to December 2018) concerning non-life motor insurance portfolio. This dataset comprises 105,555 rows and 30 columns. Each row signifies a policy transaction, while each column represents a distinct variable.
 
+## Papers of interest
+
+[Markov Chains in Actuarial Science](https://www.casact.org/abstract/introduction-markov-chain-monte-carlo-methods-and-their-actuarial-applications)
+
+## Domain Specific Knowledge
+
+[Truck drivers are more likely to have a lapse contract](https://www.google.com/search?q=are+large+vehicle+drivers+like+truck+drivers+less+likely+to+cancel+a+policy&sourceid=chrome&ie=UTF-8)
+
+[Agent vs broker policy holder differences](https://www.google.com/search?q=what+makes+someone+more+likely+to+contact+an+agent+vs+an+insurance+broker+for+insurance+on+a+vehicle&sca_esv=34388a73116c39a8&sxsrf=AKL5yDiAmagBIZBB1zT0iuiuQtEficmZxw%3A1793295928860&ei=OIbjat6FNPSC9u8PgdvnoQI&biw=1343&bih=734&ved=2ahUKEwjegcT249-XAxV0gf0HHYHtOSQQ4dUDegQIBhAM&uact=5&oq=what+makes+someone+more+likely+to+contact+an+agent+vs+an+insurance+broker+for+insurance+on+a+vehicle&gs_lp=Egxnd3Mtd2l6LXNlcnAiZHdoYXQgbWFrZXMgc29tZW9uZSBtb3JlIGxpa2VseSB0byBjb250YWN0IGFuIGFnZW50IHZzIGFuIGluc3VyYW5jZSBicm9rZXIgZm9yIGluc3VyYW5jZSBvbiBhIHZlaGljbGVIhFpQAFi0WHABeAGQAQCYAYcDoAGuFKoBBTItMi42sAEAuAEDyAEA-AEBmAIAoAIAmAMA4gMEGAAgXeIDBBgAIF7iAwQYACBf4gMEGAAgYOIDBBgAIGHiAwQYACBikgcAoAfHB7IHALgHAMIHAMgHAIAIAQ&sclient=gws-wiz-serp)
+
+[Useful to find](https://www.google.com/search?q=what+details+are+important+for+a+non-life+actuary+to+find&sourceid=chrome&ie=UTF-8)
 
 ## Project Structure
 
