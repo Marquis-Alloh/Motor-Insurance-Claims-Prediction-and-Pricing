@@ -31,7 +31,7 @@ In addition, this project seeks to answer the following questions:
 - How to perform quality assurance checks responsibly and effectively?
 
 - Who claims?
-    - What is there demographic?
+    - What are the demographics?
 
 - How much do they cost?
 
