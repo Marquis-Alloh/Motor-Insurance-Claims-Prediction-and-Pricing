@@ -32,11 +32,13 @@ def inspect_dataset(df):
     ''')
 
 
-def Find_N_datasets(N_files: int, raw_or_not=True) -> list[Path]:
-    """Return N dataset paths from config.ini.
+def Find_N_datasets(N_files: int, path_loc: str) -> list[Path]:
+    """
+    Return N dataset paths from config.ini.
     
     N_files: number of file paths of interest
-    raw_or_not: decides if the code is inspecting the raws folder (True) or the processed folder (False)"""
+    path_loc: gives the folder of the paths of interest
+    """
 
     config_file = Path("config.ini").resolve()
 
@@ -44,7 +46,7 @@ def Find_N_datasets(N_files: int, raw_or_not=True) -> list[Path]:
     if not config.read(config_file):
         raise FileNotFoundError(f"Could not read {config_file}")
 
-    section = "paths.raw" if raw_or_not else "paths.processed"
+    section = f"paths.{path_loc.lower()}"
 
     if section not in config:
         raise KeyError(f"Missing section: {section}")
