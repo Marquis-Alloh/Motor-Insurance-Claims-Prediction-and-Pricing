@@ -1,7 +1,7 @@
 # Raw and processed datasets
 data/Raw/
 data/Processed/
-data/Curated/Length_Imputation_Comparison.parquet
+data/Curated
 
 # Environment variables and credentials
 .env

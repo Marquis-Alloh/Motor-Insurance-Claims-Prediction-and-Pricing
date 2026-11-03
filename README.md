@@ -30,6 +30,32 @@ In addition, this project seeks to answer the following questions:
 
 - How to perform quality assurance checks responsibly and effectively?
 
+- Who claims?
+    - What are the demographics?
+
+- How much do they cost?
+
+- What variables drive risk?
+
+- What should the insurer charge?
+
+### Dataset
+
+The dataset being used is a [dataset of an actual motor vehicle insurance portfolio](https://data.mendeley.com/datasets/compare/5cxyb5fp4f?utm_source) for an insurer.
+
+The data is formatted as a spreadsheet, encompassing the primary activities over a span of three full years (November 2015 to December 2018) concerning non-life motor insurance portfolio. This dataset comprises 105,555 rows and 30 columns. Each row signifies a policy transaction, while each column represents a distinct variable.
+
+## Papers of interest
+
+[Markov Chains in Actuarial Science](https://www.casact.org/abstract/introduction-markov-chain-monte-carlo-methods-and-their-actuarial-applications)
+
+## Domain Specific Knowledge
+
+[Truck drivers are more likely to have a lapse contract](https://www.google.com/search?q=are+large+vehicle+drivers+like+truck+drivers+less+likely+to+cancel+a+policy&sourceid=chrome&ie=UTF-8)
+
+[Agent vs broker policy holder differences](https://www.google.com/search?q=what+makes+someone+more+likely+to+contact+an+agent+vs+an+insurance+broker+for+insurance+on+a+vehicle&sca_esv=34388a73116c39a8&sxsrf=AKL5yDiAmagBIZBB1zT0iuiuQtEficmZxw%3A1793295928860&ei=OIbjat6FNPSC9u8PgdvnoQI&biw=1343&bih=734&ved=2ahUKEwjegcT249-XAxV0gf0HHYHtOSQQ4dUDegQIBhAM&uact=5&oq=what+makes+someone+more+likely+to+contact+an+agent+vs+an+insurance+broker+for+insurance+on+a+vehicle&gs_lp=Egxnd3Mtd2l6LXNlcnAiZHdoYXQgbWFrZXMgc29tZW9uZSBtb3JlIGxpa2VseSB0byBjb250YWN0IGFuIGFnZW50IHZzIGFuIGluc3VyYW5jZSBicm9rZXIgZm9yIGluc3VyYW5jZSBvbiBhIHZlaGljbGVIhFpQAFi0WHABeAGQAQCYAYcDoAGuFKoBBTItMi42sAEAuAEDyAEA-AEBmAIAoAIAmAMA4gMEGAAgXeIDBBgAIF7iAwQYACBf4gMEGAAgYOIDBBgAIGHiAwQYACBikgcAoAfHB7IHALgHAMIHAMgHAIAIAQ&sclient=gws-wiz-serp)
+
+[Useful to find](https://www.google.com/search?q=what+details+are+important+for+a+non-life+actuary+to+find&sourceid=chrome&ie=UTF-8)
 
 ## Project Structure
 
@@ -38,7 +64,7 @@ In addition, this project seeks to answer the following questions:
 ## Project Structure
 
 ```text
-motor-insurance-pricing/
+Motor-Insurance-Claims-Prediction-and-Pricing/
 ├── data/
 │   ├── raw/                              # Original data files (local only; not committed)
 │   │   ├── Claims.csv                   # Claims data
@@ -48,7 +74,8 @@ motor-insurance-pricing/
 │   │   └── TBD.csv
 │   └── README.md                         # Data sources, licensing and setup
 ├── notebooks/
-│   └── TBD.ipynb                         # Exploratory analysis
+│   ├── TBD.ipynb                         
+│   ├── Descriptive.sql                        # Descriptive analysis
 ├── sql/
 │   ├── schema.sql                        # Database tables and constraints
 │   ├── load_data.sql                     # Data loading and transformation queries
@@ -56,7 +83,8 @@ motor-insurance-pricing/
 ├── src/
 │   └── insurance_pricing/
 │       ├── __init__.py
-│       ├── data.py                       # Data loading and validation
+│       ├── data.py                       # Data loading and inspection
+│       ├── cleaning.py                   # Data cleaning and validation
 │       ├── features.py                   # Feature engineering
 │       ├── modelling.py                  # Frequency and severity models
 │       ├── evaluation.py                 # Model diagnostics and comparisons
