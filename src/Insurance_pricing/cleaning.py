@@ -36,9 +36,6 @@ def clean_types(df):
         })
     return df
 
-def MCAR_evaluation(df):
-    from pyampute.exploration.mcar_statistical_tests import MCARTest # This is the function for the fixing of missing values.
-    pass
 
 #new = clean_dates(motor)
 
