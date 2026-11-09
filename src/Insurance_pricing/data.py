@@ -129,3 +129,43 @@ def missing_length_by_age(df, age_col, n_bins, condition=None):
     ).tolist()
 
     return age_midpoints, missing_counts, total_counts, missing_percentages
+
+def LD_missingness_acceptability():
+    """
+    Function assesses if the Lapse date missingness is expected/purposful by
+    returning records of the counts, percentages and verdict (True or False)
+    for each combination of claims and missing lapse dates
+    """
+    paths = Find_N_datasets(N_files=2, path_loc='raw')
+    motor = pd.read_csv(paths[0], sep=";")
+    claims = pd.read_csv(paths[1], sep=";")
+
+    # Create a copy of the motor dataset
+    motor_check = motor.copy()
+
+    # Get the IDs present in the claims dataset
+    claim_ids = claims["ID"].dropna().astype("string").str.strip()
+
+    # Check whether each motor ID appears in the claims dataset
+    motor_ids = motor_check["ID"].astype("string").str.strip()
+    motor_check["Claim_Made"] = motor_ids.isin(claim_ids)
+
+    # Create Date_lapse status
+    motor_check["Date_lapse_Status"] = np.where(
+        motor_check["Date_lapse"].isna(),
+        "Missing",
+        "Recorded"
+    )
+
+    # Count records for each combination
+    counts = pd.crosstab(
+        motor_check["Claim_Made"],
+        motor_check["Date_lapse_Status"]
+    )
+
+    # Calculate percentages within each claim group
+    percentages = (
+        counts.div(counts.sum(axis=1), axis=0) * 100
+    )
+
+    return counts, percentages.round(2), bool(round(percentages.round(2)["Missing"][False], 2) >= round(percentages.round(2)["Missing"][True],2) + 5)

@@ -24,6 +24,20 @@ def clean_dates(df):
             )
     return df
 
+
+
+
+def clean_names(df: pd.DataFrame, col_names: dict, lower: bool = False):
+    if col_names is not None:
+        reject = []
+        for i in col_names.keys():
+            if i not in df.columns:
+                reject.append(i)
+                col_names.pop(i)
+        if lower: df.rename(str.lower, axis='columns', columns=col_names, inplace=True)
+        else: df.rename(columns=col_names, inplace=True)
+        if len(reject)>0: print(f"the rejected columns {reject}")
+        
 def clean_types(df):
     """
     Formats the types in the datasets
@@ -35,15 +49,3 @@ def clean_types(df):
             "P": 1
         })
     return df
-
-
-#new = clean_dates(motor)
-
-# Missing values
-#print(motor.isna().sum().sort_values(ascending=False))
-
-# Numerical distributions
-#print(motor.describe())
-
-# Repeated rows
-#print("Exact duplicate motor rows:", motor.duplicated().sum())
