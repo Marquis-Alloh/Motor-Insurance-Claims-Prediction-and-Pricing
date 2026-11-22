@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 import numpy as np
 from configparser import ConfigParser
 from pathlib import Path
@@ -99,6 +100,38 @@ def Dates_to_times(
         return temp[0]
 
     return temp
+
+def plot_df(df, x_col, y_col, kind="scatter", title=None, figsize=(8, 5)):
+
+    # Check that columns exist
+    if x_col not in df.columns or y_col not in df.columns:
+        raise ValueError("Specified columns must exist in the DataFrame.")
+
+    # Remove rows with missing x or y values
+    data = df[[x_col, y_col]].dropna()
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=figsize)
+
+    # Plot data
+    if kind == "scatter":
+        ax.scatter(data[x_col], data[y_col])
+    elif kind == "line":
+        ax.plot(data[x_col], data[y_col], marker="o")
+    else:
+        raise ValueError("kind must be either 'scatter' or 'line'.")
+
+    # Labels and formatting
+    ax.set_xlabel(x_col)
+    ax.set_ylabel(y_col)
+    ax.set_title(title if title else f"{y_col} against {x_col}")
+    ax.grid(True, alpha=0.3)
+
+    plt.tight_layout()
+    plt.show()
+
+    return fig, ax
+    
 
 def missing_length_by_age(df, age_col, n_bins, condition=None):
 
