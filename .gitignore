@@ -3,6 +3,9 @@ data/Raw/
 data/Processed/
 data/Curated
 
+# the vscode debug folder
+.vscode/
+
 # Environment variables and credentials
 .env
 .env.*
