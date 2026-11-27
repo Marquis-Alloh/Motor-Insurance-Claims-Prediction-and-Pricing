@@ -3,6 +3,9 @@ data/Raw/
 data/Processed/
 data/Curated
 
+# Models
+/Models
+
 # the vscode debug folder
 .vscode/
 
